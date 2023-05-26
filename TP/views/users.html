@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Liste des utilisateurs</title>
+  <link href="/assets/css/style.css" rel="stylesheet" type="text/css">
+  <script>
+    function deleteUser(id) {
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = '/users';
+
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = 'id';
+      input.value = id;
+
+      form.appendChild(input);
+      document.body.appendChild(form);
+
+      form.submit();
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Liste des utilisateurs</h1>
+    <nav class="menu">
+      <ul>
+        <li><p><a href="/">Retour à la page d'accueil</a></p></li>
+        <li><p><a href="/calculator">Calculator</a></p></li>
+      </ul>
+    </nav>
+    <ul>
+      {{userList}}
+    </ul>
+  </div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "dependencies": {
+    "dayjs": "^1.11.7",
+    "dotenv": "^16.0.3"
+  }
+}

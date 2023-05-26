@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Calculatrice avec mémoire</title>
+    <link href="/assets/css/style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Calculatrice avec mémoire</h1>
+      <nav class="menu">
+        <ul>
+          <li>
+            <p><a href="/">Retour à la page d'accueil</a></p>
+          </li>
+        </ul>
+      </nav>
+      <form action="/calculator" method="POST">
+        <div class="form-group">
+          <label for="number1">Number1</label>
+          <input
+            type="number"
+            id="number1"
+            name="number1"
+            step="any"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="number2">Number2</label>
+          <input
+            type="number"
+            id="number2"
+            name="number2"
+            step="any"
+            required
+          />
+        </div>
+        <button type="submit" name="operation" value="add">Additionner</button>
+        <button type="submit" name="operation" value="multiply">
+          Multiplier
+        </button>
+      </form>
+      <h2>Résultat : {{result}}</h2>
+      <form action="/results" method="GET">
+        <button type="submit">Récupérer tous les résultats</button>
+      </form>
+    </div>
+  </body>
+</html>
