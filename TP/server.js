@@ -7,6 +7,7 @@ const utils = require('./core/utils');
 
 dotenv.config();
 
+
 const PORT = process.env.APP_PORT || 3000;
 
 // Chargement des données des étudiants
